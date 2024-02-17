@@ -1,0 +1,96 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+.banner {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Altura inicial do banner */
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    background-image: url('../img/banner.png');
+    background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+    background-position: center; /* Centraliza a imagem no elemento */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+}
+.logo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.app {
+    margin-bottom: 40px;
+    text-align: left; /* Alinhar o texto à esquerda */
+    display: inline-block;
+    width: 100%;
+}
+.app img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    margin-bottom: 10px; /* Espaço entre a imagem e o botão de download */
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    float: left; /* Fazer a imagem flutuar à esquerda */
+}
+.app img:hover {
+    transform: scale(1.1);
+}
+.app a {
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0; /* Ajuste do padding para que o botão ocupe a largura da imagem */
+    border-radius: 25px;
+    transition: background-color 0.3s ease-in-out;
+    overflow: hidden;
+    position: relative;
+    display: block; /* Tornar o link de download em um bloco */
+    clear: both; /* Limpar a flutuação */
+    width: 90px; /* Largura igual à da imagem */
+    box-sizing: border-box; /* Incluir padding e bordas na largura total */
+    text-align: center; /* Centralizar o texto */
+}
+.app a:hover {
+    background-color: #0056b3;
+}
+.app a span {
+    position: relative;
+    z-index: 1;
+}
+.app a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-in-out;
+    z-index: 0;
+}
+.app a:hover::after {
+    background-color: rgba(0, 0, 0, 0.3);
+}
